@@ -1,0 +1,32 @@
+<table border="1" style="border-collapse:collapse;" cellpadding="5">
+
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Location</th>
+</tr>
+
+
+<tr ng-repeat="value in a_users track by $index">
+<td>{{value.name}}</td>
+<td>{{value.email}}</td>
+<td>{{value.loc}}</td>
+<td>
+<a href="#/users/{{$index}}">view user</a>
+</td>
+</tr>
+
+</table>
+<br />
+<div ng-bind-html = "http_response"></div>
+<br /></br>
+{{serive_resp}}
+<br /><br />
+
+<input type="text" ng-model="username" />
+<p>{{username}}</p>
+
+<br /><br />
+<button ng-clock="updateValue()">Click</button>
+<br /> <br />
+<p>{{city}}</p>
